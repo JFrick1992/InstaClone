@@ -41,12 +41,22 @@ class PhotoShareViewController: UIViewController, UIImagePickerControllerDelegat
         let imageTemp = self.image.image!
         shareableImageView.image = imageTemp
         
-        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func sharePhoto(_ sender: Any) {
+        let caption = captionField.text!
+        if shareableImageView.image != #imageLiteral(resourceName: "image_placeholder") && (!caption.isEmpty){
+            Post.postUserImage(image: self.shareableImageView.image, withCaption: caption, withCompletion: nil)
+            captionField.text = "";
+            shareableImageView.image = #imageLiteral(resourceName: "image_placeholder")
+            self.performSegue(withIdentifier: "shareToFeed", sender: nil)
+        }
+    }
+    
     func resize(image: UIImage, newSize: CGSize) -> UIImage {
         let resizeImageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: newSize.width, height: newSize.height)))
         resizeImageView.contentMode = UIViewContentMode.scaleAspectFill
