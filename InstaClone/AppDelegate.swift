@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+        let parseConfiguration = ParseClientConfiguration( block: {(ParseMutableClientConfiguration)-> Void in
+            ParseMutableClientConfiguration.applicationId = "instaclone-1224"
+            ParseMutableClientConfiguration.clientKey = "instaparseclone1224"
+            ParseMutableClientConfiguration.server = "https://instaclone-1224.herokuapp.com/parse"
+        })
+        Parse.initialize(with: parseConfiguration)
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        if let currentUser = PFUser.current() {
+            print(currentUser.username!)
+            let cvc = storyboard.instantiateViewController(withIdentifier: "MainFeed")
+            window?.rootViewController = cvc
+            return true
+        } else {
+            return true
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
