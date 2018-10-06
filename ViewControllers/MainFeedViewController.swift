@@ -8,7 +8,7 @@
 
 import UIKit
 import Parse
-class MainFeedViewController: UIViewController {
+class MainFeedViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var window: UIWindow?
     
     override func viewDidLoad() {

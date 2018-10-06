@@ -16,6 +16,7 @@
 		5B85FC9E21684099001AC934 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B85FC9D21684099001AC934 /* SignUpViewController.swift */; };
 		5B85FCA02168428E001AC934 /* ExtendedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B85FC9F2168428E001AC934 /* ExtendedViewController.swift */; };
 		5B85FCA2216849E0001AC934 /* MainFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B85FCA1216849E0001AC934 /* MainFeedViewController.swift */; };
+		5B85FCA4216857B4001AC934 /* PhotoShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B85FCA3216857B4001AC934 /* PhotoShareViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5B85FC9D21684099001AC934 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5B85FC9F2168428E001AC934 /* ExtendedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedViewController.swift; sourceTree = "<group>"; };
 		5B85FCA1216849E0001AC934 /* MainFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedViewController.swift; sourceTree = "<group>"; };
+		5B85FCA3216857B4001AC934 /* PhotoShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoShareViewController.swift; sourceTree = "<group>"; };
 		BAE23966F521F0E6DDEA8A9E /* Pods_InstaClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8210E4BBC07733743AFB9FD /* Pods-InstaClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaClone/Pods-InstaClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +51,7 @@
 		5B48A8F021667F7B0096AF8C = {
 			isa = PBXGroup;
 			children = (
+				5B85FCA5216883FD001AC934 /* Model */,
 				5B85FC9A21684032001AC934 /* ViewControllers */,
 				5B48A8FB21667F7B0096AF8C /* InstaClone */,
 				5B48A8FA21667F7B0096AF8C /* Products */,
@@ -84,8 +87,16 @@
 				5B85FC9D21684099001AC934 /* SignUpViewController.swift */,
 				5B85FC9F2168428E001AC934 /* ExtendedViewController.swift */,
 				5B85FCA1216849E0001AC934 /* MainFeedViewController.swift */,
+				5B85FCA3216857B4001AC934 /* PhotoShareViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5B85FCA5216883FD001AC934 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DB883F351811E029423A1E4F /* Frameworks */ = {
@@ -222,6 +233,7 @@
 				5B85FC9E21684099001AC934 /* SignUpViewController.swift in Sources */,
 				5B85FCA2216849E0001AC934 /* MainFeedViewController.swift in Sources */,
 				5B85FC9C21684088001AC934 /* LogInViewController.swift in Sources */,
+				5B85FCA4216857B4001AC934 /* PhotoShareViewController.swift in Sources */,
 				5B48A8FD21667F7B0096AF8C /* AppDelegate.swift in Sources */,
 				5B85FCA02168428E001AC934 /* ExtendedViewController.swift in Sources */,
 			);
