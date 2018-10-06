@@ -19,6 +19,7 @@
 		5B85FCA4216857B4001AC934 /* PhotoShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B85FCA3216857B4001AC934 /* PhotoShareViewController.swift */; };
 		5B85FCA72168845E001AC934 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B85FCA62168845E001AC934 /* Post.swift */; };
 		5B85FCA921688AAF001AC934 /* InstaPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B85FCA821688AAF001AC934 /* InstaPostCell.swift */; };
+		5B85FCAB21689C2D001AC934 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B85FCAA21689C2D001AC934 /* PostDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		5B85FCA3216857B4001AC934 /* PhotoShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoShareViewController.swift; sourceTree = "<group>"; };
 		5B85FCA62168845E001AC934 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5B85FCA821688AAF001AC934 /* InstaPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaPostCell.swift; sourceTree = "<group>"; };
+		5B85FCAA21689C2D001AC934 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		BAE23966F521F0E6DDEA8A9E /* Pods_InstaClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8210E4BBC07733743AFB9FD /* Pods-InstaClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaClone/Pods-InstaClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 				5B85FC9F2168428E001AC934 /* ExtendedViewController.swift */,
 				5B85FCA1216849E0001AC934 /* MainFeedViewController.swift */,
 				5B85FCA3216857B4001AC934 /* PhotoShareViewController.swift */,
+				5B85FCAA21689C2D001AC934 /* PostDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				5B85FC9E21684099001AC934 /* SignUpViewController.swift in Sources */,
 				5B85FCA2216849E0001AC934 /* MainFeedViewController.swift in Sources */,
 				5B85FC9C21684088001AC934 /* LogInViewController.swift in Sources */,
+				5B85FCAB21689C2D001AC934 /* PostDetailsViewController.swift in Sources */,
 				5B85FCA921688AAF001AC934 /* InstaPostCell.swift in Sources */,
 				5B85FCA4216857B4001AC934 /* PhotoShareViewController.swift in Sources */,
 				5B48A8FD21667F7B0096AF8C /* AppDelegate.swift in Sources */,

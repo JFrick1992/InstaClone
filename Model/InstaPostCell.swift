@@ -10,7 +10,6 @@ import UIKit
 
 class InstaPostCell: UITableViewCell {
 
-    @IBOutlet weak var postDateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
     override func awakeFromNib() {

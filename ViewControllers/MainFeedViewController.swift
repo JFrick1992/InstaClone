@@ -63,14 +63,20 @@ class MainFeedViewController: UIViewController,UITableViewDataSource {
             let image = try UIImage(data: userPosts[indexPath.row].media.getData())
             cell.postImageView.image = image
             cell.captionLabel.text = userPosts[indexPath.row].caption
-            let date = NSDate(timeIntervalSince1970: userPosts[indexPath.row].timeInterval)
-            cell.postDateLabel.text = date.description
         } catch {
             print("Error")
-        }
+        }    
         
         return cell
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "postDetailsSegue") {
+            let postDetails = segue.destination as! PostDetailsViewController
+            let cell = sender as! InstaPostCell
+            let indexPath = tableView.indexPath(for: cell)!
+            postDetails.post = userPosts[indexPath.row]
+        
+        }
+    }
     
 }
