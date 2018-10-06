@@ -22,15 +22,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ParseMutableClientConfiguration.server = "https://instaclone-1224.herokuapp.com/parse"
         })
         Parse.initialize(with: parseConfiguration)
+
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         if let currentUser = PFUser.current() {
             print(currentUser.username!)
             let cvc = storyboard.instantiateViewController(withIdentifier: "MainFeed")
             window?.rootViewController = cvc
-            return true
-        } else {
-            return true
         }
+        NotificationCenter.default.addObserver(forName: Notification.Name("didLogout"), object: nil, queue: OperationQueue.main) { (Notification) in
+            print("Logout notification received")
+            self.logOut()
+        }
+        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -54,7 +57,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    func logOut() {
+        // Logout the current user
+        PFUser.logOutInBackground(block: { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print("Successful loggout")
+                // Load and show the login view controller
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginViewController = storyboard.instantiateViewController(withIdentifier: "logInView")
+                self.window?.rootViewController = loginViewController
+            }
+        })
+    }
 
 }
 

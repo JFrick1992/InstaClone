@@ -75,7 +75,7 @@
                     <connections>
                         <outlet property="passwordField" destination="MX4-EI-9PF" id="dza-YA-CAA"/>
                         <outlet property="usernameField" destination="iar-Ig-z3z" id="TPq-o5-hIz"/>
-                        <segue destination="ocu-H4-WZK" kind="presentation" identifier="loginSegue" id="di3-OO-lWl"/>
+                        <segue destination="ocu-H4-WZK" kind="presentation" identifier="logInSegue" id="di3-OO-lWl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -85,7 +85,7 @@
         <!--MainFeedViewController-->
         <scene sceneID="uWi-2i-kAe">
             <objects>
-                <viewController title="MainFeedViewController" id="sTm-a7-uJJ" sceneMemberID="viewController">
+                <viewController title="MainFeedViewController" id="sTm-a7-uJJ" customClass="MainFeedViewController" customModule="InstaClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ncF-m2-BVY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,15 +93,14 @@
                         <viewLayoutGuide key="safeArea" id="TFx-I9-T7U"/>
                     </view>
                     <navigationItem key="navigationItem" id="lSb-1g-Drc">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="uDu-p9-UZ9">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="qUK-z5-VMK">
                             <connections>
-                                <action selector="logout:" destination="vDZ-SR-56v" id="a0j-Sn-Vyw"/>
+                                <action selector="logout:" destination="sTm-a7-uJJ" id="PiR-T2-kcE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I56-kR-B86" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="vDZ-SR-56v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1729" y="499"/>
         </scene>

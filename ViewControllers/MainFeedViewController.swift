@@ -23,8 +23,11 @@ class MainFeedViewController: UIViewController {
     }
     
     @IBAction func logout(_ sender: Any) {
-        PFUser.logOut()
+       PFUser.logOut()
+        NotificationCenter.default.post(name: NSNotification.Name("didLogout"), object: nil)
     }
+    
+    
     
     
 }
